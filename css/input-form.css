@@ -1,0 +1,25 @@
+.form-bg::before{
+    background-image: url('/images/form-bg.png');
+    content: "";
+    position: absolute;
+    height: 800px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.main-form{
+    background-color: teal;
+    border: 2px solid black;
+    width: 600px;
+    height: auto;
+    margin-top: 100px;
+    z-index: -1;
+    opacity: 1;
+}
