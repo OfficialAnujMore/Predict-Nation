@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="Login.html">Log In</a>
@@ -28,10 +28,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="input_form.html">Temp</a>
+                <li class="nav-item" id="logout">
+                    <a class="nav-link" href="#">Log out</a>
                 </li>
-                
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="input_form.html">Temp</a>
+                </li> -->
+
             </ul>
         </div>
     </nav>
@@ -45,13 +48,13 @@
             <div class="welcome-text d-flex justify-content-center" style="font-size: 40px;">
                 Welcome to Skills Based Salary Prediciton
             </div>
-            <p class="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatum iusto ex deserunt magni
-                necessitatibus? Omnis fugit dignissimos dicta quisquam nisi necessitatibus quae tempora expedita ratione
-                temporibus error culpa eos corrupti vel recusandae aperiam iste rerum, assumenda, eveniet sequi.
-                Officia?
+            <p class="content" style="font-size: 20px;">
+                Do you worry about what your market value is ?
+                Your at the right platform know your cost -to-company /market value and get one step ahead of other.
+
+
             </p>
-            <a href="CheckPage.html">
+            <a href="input_form.html">
                 <button type="button" class="btn btn-outline-primary">Get Started</button>
             </a>
         </div>
@@ -61,6 +64,36 @@
     </div>
 
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyD3zUFoe5JMdtzLvW5E2K2w5sU1qnyAOYI",
+            authDomain: "predict-nation.firebaseapp.com",
+            projectId: "predict-nation",
+            storageBucket: "predict-nation.appspot.com",
+            messagingSenderId: "380821199368",
+            appId: "1:380821199368:web:b9125ed6394e1c94fa0fbd",
+            measurementId: "G-PVPD1SDJZM"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        // make auth and firestore referece
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -71,7 +104,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
         integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
         crossorigin="anonymous"></script>
-
+    <script src="./scripts/auth.js"></script>
 </body>
 
 </html>
