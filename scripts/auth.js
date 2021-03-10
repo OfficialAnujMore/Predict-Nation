@@ -1,19 +1,56 @@
-auth.onAuthStateChanged(user =>{
-    if (user){
-        console.log('user logged in', user);
+// Signup
+signupForm = document.querySelector('#signup-form');
+signinForm = document.querySelector('#signin-form');
+login_container = document.querySelector('.container');
+logout = document.querySelector('.logout');
+
+//maintain session
+const loggedInLinks = document.querySelectorAll('.logged-in');
+
+const loggedOutLinks = document.querySelectorAll('.logged-out');
+
+const accountDetails = document.querySelector('.welcome-text');
+
+
+
+auth.onAuthStateChanged(user => {
+    if (user) {
+
+        // show user details
+        const html = `
+        <div> Welcome ${user.email} </div>`;
+        accountDetails.innerHTML = html;
+
+     
+
+        console.log('User Logged In', user);
+        setupUI(user);
     }
-    else{
-        console.log('user logged out', user);
+    else {
+
+        // hide user details
+        accountDetails.innerHTML = "Welcome to skillbased salary prediction";
+        setupUI();
+        console.log('User logged out');
     }
-    // console.log(user);
+
 });
 
 
-// Signup
-const signupForm = document.querySelector('#signup-form');
-const signinForm = document.querySelector('#signin-form');
-const login_container = document.querySelector('.container');
-// const logout = document.querySelector('#logout');
+const setupUI = (user) => {
+
+    if (user) {
+
+        loggedInLinks.forEach(item => item.style.display = 'none');
+        loggedOutLinks.forEach(item => item.style.display = 'block');
+
+    }
+    else {
+        loggedInLinks.forEach(item => item.style.display = 'block');
+        loggedOutLinks.forEach(item => item.style.display = 'none');
+    }
+}
+
 
 
 signupForm.addEventListener('submit', (e) => {
@@ -29,10 +66,6 @@ signupForm.addEventListener('submit', (e) => {
         login_container.classList.remove("sign-up-mode");
         signupForm.reset();
     });
-
-
-
-
 });
 
 //Login user
@@ -52,9 +85,15 @@ signinForm.addEventListener('submit', (e) => {
 
 //Logout
 
-// logout.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     console.log("pressed");
-//     auth.signOut().then(() => { });
+logout.addEventListener("click", (e) => {
+    e.preventDefault();
 
-// });
+    auth.signOut().then(() => {
+        console.log("pressed");
+
+    });
+
+});
+
+
+
