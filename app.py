@@ -33,6 +33,8 @@ def analyse():
 	if request.method == 'POST':
 		raw_text = request.form['rawtext']
 		#NLP stuff
+		blob_polarity = 0 
+		blob_subjectivity = 0
 		blob = TextBlob(raw_text)
 		received_text2 = blob
 		blob_polarity = blob.sentiment.polarity
