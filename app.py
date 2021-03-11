@@ -24,17 +24,28 @@ def login():
 
 @app.route('/form')
 def form():
-	return render_template('input_form.html')
+	blob_polarity = 0 
+	blob_subjectivity = 0
+	sentiment = 'None'
+	received_text = 'None'
+	return render_template('input_form.html',
+							blob_polarity = blob_polarity,
+							blob_subjectivity = blob_subjectivity,
+							sentiment = sentiment,
+							)
 
 
 @app.route('/analyse',methods = ['POST'])
 def analyse():
 
+	blob_polarity = 0 
+	blob_subjectivity = 0
+	sentiment = 'None'
+	received_text = 'None'
 	if request.method == 'POST':
 		raw_text = request.form['rawtext']
 		#NLP stuff
-		blob_polarity = 0 
-		blob_subjectivity = 0
+		
 		blob = TextBlob(raw_text)
 		received_text2 = blob
 		blob_polarity = blob.sentiment.polarity
