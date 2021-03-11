@@ -60,8 +60,8 @@ def analyse():
 
 	return render_template('input_form.html', 
 							received_text = received_text2,
-							blob_polarity = blob_polarity,
-							blob_subjectivity = blob_subjectivity,
+							blob_polarity = round(blob_polarity*100,2),
+							blob_subjectivity = round(blob_subjectivity*100,2),
 							sentiment = sentiment,
 							)
 

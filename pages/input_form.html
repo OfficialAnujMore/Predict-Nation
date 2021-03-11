@@ -131,8 +131,8 @@
             </form>
 
             <div id="demo">
-                <div class="circlechart" data-percentage="{{blob_polarity*100}}"> {{sentiment}}</div>
-                <div class="circlechart" data-percentage="{{blob_subjectivity*100}}">Subjectivity</div>
+                <div class="circlechart" data-percentage="{{blob_polarity}}"> {{sentiment}}</div>
+                <div class="circlechart" data-percentage="{{blob_subjectivity}}">Subjectivity</div>
               </div>
         </div>
         
@@ -209,6 +209,7 @@
 
 <script src="{{ url_for('static', filename='scripts/progresscircle.js')}}"></script>
 <script src="{{ url_for('static', filename='scripts/progressCircleUI.js')}}"></script>
+
 
 
 <script>

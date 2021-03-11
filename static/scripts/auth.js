@@ -1,8 +1,4 @@
-// Signup
-signupForm = document.querySelector('#signup-form');
-signinForm = document.querySelector('#signin-form');
-login_container = document.querySelector('.container');
-logout = document.querySelector('.logout');
+
 
 //maintain session
 const loggedInLinks = document.querySelectorAll('.logged-in');
@@ -35,7 +31,6 @@ auth.onAuthStateChanged(user => {
 const setupUI = (user) => {
 
     if (user) {
-
         loggedInLinks.forEach(item => item.style.display = 'none');
         loggedOutLinks.forEach(item => item.style.display = 'block');
 
@@ -48,47 +43,7 @@ const setupUI = (user) => {
 
 
 
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
 
-    //get user info
-    const email = signupForm['signup-email'].value;
-    const password = signupForm['signup-password'].value;
-
-    //Signup the user
-    auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        // console.log(cred.user);
-        login_container.classList.remove("sign-up-mode");
-        signupForm.reset();
-    });
-});
-
-//Login user
-signinForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = signinForm['signin-email'].value;
-    const password = signinForm['signin-password'].value;
-    // console.log(email, password);
-
-    // Login the user
-    auth.signInWithEmailAndPassword(email, password).then(cred => {
-        // console.log(cred);
-        signinForm.reset();
-        window.location = "/index.html";
-    });
-});
-
-//Logout
-
-logout.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    auth.signOut().then(() => {
-        console.log("pressed");
-
-    });
-
-});
 
 
 
