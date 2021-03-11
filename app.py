@@ -1,4 +1,6 @@
+
 from flask import Flask, render_template,request,url_for
+from flask_bootstrap import Bootstrap 
 
 
 # NLP Packages
@@ -7,11 +9,40 @@ import random
 import time
 
 app = Flask(__name__, template_folder='pages')
+Bootstrap(app)
 
 
 @app.route('/')
 def index():
 	return render_template('index.html')
+
+@app.route('/login')
+def login():
+	return render_template('login.html')
+
+
+
+@app.route('/form')
+def form():
+	return render_template('input_form.html')
+
+
+@app.route('/analyse',methods = ['POST'])
+def analyse():
+
+	if request.method == 'POST':
+		raw_text = request.form['rawtext']
+		#NLP stuff
+		blob = TextBlob(raw_text)
+		received_text2 = blob
+		blob_polarity = blob.sentiment.polarity
+		blob_subjectivity = blob.sentiment.subjectivity
+
+	return render_template('input_form.html', 
+							received_text = received_text2,
+							blob_polarity = blob_polarity,
+							blob_subjectivity = blob_subjectivity
+							)
 
 
 

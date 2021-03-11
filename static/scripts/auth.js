@@ -17,25 +17,20 @@ auth.onAuthStateChanged(user => {
     if (user) {
 
         // show user details
+        console.log('User Logged In', user);
         const html = `
         <div> Welcome ${user.email} </div>`;
         accountDetails.innerHTML = html;
 
-     
-
-        console.log('User Logged In', user);
         setupUI(user);
     }
     else {
-
         // hide user details
         accountDetails.innerHTML = "Welcome to skillbased salary prediction";
         setupUI();
         console.log('User logged out');
     }
-
 });
-
 
 const setupUI = (user) => {
 
