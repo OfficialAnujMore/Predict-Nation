@@ -35,6 +35,12 @@
   
 }
 
+
+.inputtext {
+  height: 50px;
+  font-size: 15px;
+}
+
 .form-content{
   margin-top: 20px;
   margin-bottom: 20px;
@@ -53,3 +59,6 @@
   color:green;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
