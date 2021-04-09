@@ -1,13 +1,15 @@
 
+
 from flask import Flask, render_template,request,url_for
 from flask_bootstrap import Bootstrap 
 import pickle
 import numpy as np
 model=pickle.load(open('model.pkl','rb'))
 
+
 # NLP Packages
-from textblob import TextBlob,Word 
-import random 
+from textblob import TextBlob, Word
+import random
 import time
 
 app = Flask(__name__, template_folder='pages')
@@ -16,30 +18,31 @@ Bootstrap(app)
 
 @app.route('/')
 def index():
-	return render_template('index.html')
+    return render_template('index.html')
+
 
 @app.route('/login')
 def login():
-	return render_template('login.html')
-
+    return render_template('login.html')
 
 
 @app.route('/form')
 def form():
-	blob_polarity = 0 
-	blob_subjectivity = 0
-	sentiment = 'None'
-	received_text = 'None'
-	return render_template('input_form.html',
-							blob_polarity = blob_polarity,
-							blob_subjectivity = blob_subjectivity,
-							sentiment = sentiment,
-							)
+    blob_polarity = 0
+    blob_subjectivity = 0
+    sentiment = 'None'
+    received_text = 'None'
+    return render_template('input_form.html',
+                           blob_polarity=blob_polarity,
+                           blob_subjectivity=blob_subjectivity,
+                           sentiment=sentiment,
+                           )
 
 
-@app.route('/analyse',methods = ['POST'])
+@app.route('/analyse', methods=['POST'])
 def analyse():
 
+<<<<<<< HEAD
 	blob_polarity = 0 
 	blob_subjectivity = 0
 	sentiment = 'None'
@@ -146,8 +149,5 @@ def analyse():
 
 							)
 
-
-
-
 if __name__ == '__main__':
-	app.run(debug=True)
+    app.run(debug=True)
