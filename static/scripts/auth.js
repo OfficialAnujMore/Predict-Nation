@@ -20,7 +20,7 @@ auth.onAuthStateChanged(user => {
     }
     else {
         // hide user details
-        accountDetails.innerHTML = "Welcome to skillbased salary prediction";
+        accountDetails.innerHTML = "Welcome to Skills Based Salary Prediction";
         setupUI();
         console.log('User logged out');
     }

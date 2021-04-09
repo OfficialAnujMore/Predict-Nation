@@ -46,52 +46,259 @@
     <div class="main-content d-flex justify-content-center flex-column w-100 p-3">
         <div class="text-box d-flex flex-column align-self-center">
             <form method="POST" action="{{ url_for('analyse')}}" id="myForm" class="form-content">
-                <div class="row mx-md-n8">
-                    <div class="form-group col px-md-5">
-                        <label for="Name" class="h2">Name</label>
-                        <input type="text" class="form-control " style="height:50px; font-size: x-large;" id="name"
-                            aria-describedby="emailHelp" placeholder="Full Name">
-                    </div>
-                    <div class="form-group  col px-md-5">
-                        <label for="exampleInputEmail1" class="h2">Email address</label>
-                        <input type="email" class="form-control email-address" rows="5" style=" font-size: x-large;"
-                            id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted" style="font-size: 20px;">We'll never share
-                            your email with anyone
-                            else.</small>
-                    </div>
-                </div>
+
 
                 <div class="row mx-md-n8">
-                    <div class="form-group h2 col px-md-5" style="height:50px; font-size: x-large;">
+                    <div class="form-group h2 col px-md-5" style="height:50px; font-size: x-medium;">
                         <medium class="form-text">Select a field.</medium>
-                        <select class="form-control form-control-lg" style="height:50px; font-size: large;">
+                        <select id="DeveloperOption" name="developer" class="form-control form-control-lg" style="height:50px; font-size: medium;">
 
                             <option>Android Developer</option>
+                            <option>AI Developer</option>
                             <option>Backend Developer</option>
+                            <option>Business Analyst</option>
+                            <option>Cloud Computing</option>
                             <option>Data Analyst</option>
-                            <option>Data Scientist</option>
+                            <option>Data Science</option>
+                            <option>Deep Learning</option>
                             <option>Flutter Developer</option>
-                            <option>Full Stack Developer</option>
-                            <option>IOS Developer</option>
-                            <option>Java Developer</option>
-                            <option>Machine Learning</option>
-                            <option>MEAN Developer</option>
-                            <option>MERN Developer</option>
-                            <option>Python Developer</option>
-                            <option>React JS Developer</option>
-                            <option>React Native Developer</option>
-                            <option>UI/UX Designer</option>
-                            <option>Web Developer</option>
-
+                            <option>Game Developer</option>
+                           
                         </select>
 
                     </div>
                     <div class="form-group col px-md-5">
-                        <label for="exampleInputEmail1" class="h2">Enter your skills.</label>
-                        <textarea class="form-control skills" id="validationTextarea"
-                            style="height:50px; font-size: large;" placeholder="C, C++, Java, etc.."
-                            ></textarea>
+                        <small id="skillselect" class="form-text text-muted" style="font-size: 25px;">Select the skills</small>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="1" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Java </label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="2" value="option2">
+                            <label class="form-check-label" style="font-size: 14px; font-weight: 400;">Android SDK</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="3" id="inlineCheckbox3" value="option3">
+                            <label class="form-check-label" style="font-size: 14px; font-weight: 400;">Android Studio</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="4" id="inlineCheckbox4" value="option4">
+                            <label class="form-check-label" style="font-size: 14px; font-weight: 400;">APIs</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="5" id="inlineCheckbox5" value="option5">
+                            <label class="form-check-label" style="font-size: 14px; font-weight: 400;">Databases</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="6" id="inlineCheckbox6" value="option6">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Material Designing</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="7" id="inlineCheckbox7" value="option7">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Kotlin</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="8" id="inlineCheckbox8" value="option8">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">UX/UI</label>
+                          </div>
+                          
+                          
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="9" id="inlineCheckbox9" value="option9">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Python </label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox10" name="10" value="option10">
+                            <label class="form-check-label" style="font-size: 14px; font-weight: 400;">Scala</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="11" id="inlineCheckbox11" value="option11">
+                            <label class="form-check-label" style="font-size: 14px; font-weight: 400;">Mathematical Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="12" id="inlineCheckbox12" value="option12">
+                            <label class="form-check-label" style="font-size: 14px; font-weight: 400;">Analytical Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="13" id="inlineCheckbox13" value="option13">
+                            <label class="form-check-label" style="font-size: 14px; font-weight: 400;">Machine Learning</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="14" id="inlineCheckbox14" value="option14">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Data Science</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="15" id="inlineCheckbox15" value="option15">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Data Statistics</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="16" id="inlineCheckbox16" value="option16">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">PostgreSQL</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="17" id="inlineCheckbox17" value="option17">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">MySQL</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="18" id="inlineCheckbox18" value="option18">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">GraphQL</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="19" id="inlineCheckbox19" value="option19">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">NodeJS</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="20" id="inlineCheckbox20" value="option20">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">MongoDB</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="21" id="inlineCheckbox21" value="option21">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Server Handling</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="22" id="inlineCheckbox22" value="option22">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Optimize Queries</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="23" id="inlineCheckbox23" value="option23">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Consultancy Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="24" id="inlineCheckbox24" value="option24">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Oral Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="25" id="inlineCheckbox25" value="option25">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Facilation Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="26" id="inlineCheckbox26" value="option26">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Written Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="27" id="inlineCheckbox27" value="option27">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Organizational Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="28" id="inlineCheckbox28" value="option28">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Technical Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="29" id="inlineCheckbox29" value="option29">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">database Skills</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="30" id="inlineCheckbox30" value="option30">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Devops Quality Assurance</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="31" id="inlineCheckbox31" value="option31">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Cloud technologies</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="32" id="inlineCheckbox32" value="option32">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Multi-cloud environment</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="33" id="inlineCheckbox33" value="option33">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">DevOPS</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="34" id="inlineCheckbox34" value="option34">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Cloud Certificate</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="35" id="inlineCheckbox35" value="option35">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Microsoft Excel</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="36" id="inlineCheckbox36" value="option36">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Statistical Programming</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="37" id="inlineCheckbox37" value="option37">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Data Visualization</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="38" id="inlineCheckbox38" value="option38">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Research</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="39" id="inlineCheckbox39" value="option39">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Collaboration</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="40" id="inlineCheckbox40" value="option40">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Data Extraction</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="41" id="inlineCheckbox41" value="option41">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">R</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="42" id="inlineCheckbox42" value="option42">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Data Loading</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="43" id="inlineCheckbox43" value="option43">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Data Wrangling</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="44" id="inlineCheckbox44" value="option44">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Data Exploration</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="45" id="inlineCheckbox45" value="option45">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">TensorFlow</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="46" id="inlineCheckbox46" value="option46">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">NLP</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="47" id="inlineCheckbox47" value="option47">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Robotic Automation</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="48" id="inlineCheckbox48" value="option48">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Git</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="49" id="inlineCheckbox49" value="option49">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">SDLC</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="50" id="inlineCheckbox50" value="option50">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Fix Bugs</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="51" id="inlineCheckbox51" value="option51">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Dart</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="52" id="inlineCheckbox52" value="option52">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Critical Thinking</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="53" id="inlineCheckbox53" value="option53">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Creativity</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="54" id="inlineCheckbox54" value="option54">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Story Telling Ability</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="55" id="inlineCheckbox55" value="option55">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">Time Management</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="56" id="inlineCheckbox56" value="option56">
+                            <label class="form-check-label"  style="font-size: 14px; font-weight: 400;">MultiMedia Software Development</label>
+                          </div>
+
+
+
+
                     </div>
                 </div>
 
@@ -109,9 +316,7 @@
                     <div class="form-group mr-5">
                         <button type="submit" class="btn btn-primary btn-lg" id="submit">Submit</button>
                     </div>
-                    <div class="form-group mr-5">
-                        <button type="reset" class="btn btn-outline-dark btn-lg">Clear</button>
-                    </div>
+
                     <div class="form-group mr-5">
                         <a href="{{ url_for('form')}}" type="button" class="btn btn-danger btn-lg"> Reset</a>
                     </div>
@@ -122,6 +327,13 @@
         <div id="demo" class="d-flex justify-content-center flex-row">
             <div class="circlechart" data-percentage="{{blob_polarity}}"> {{sentiment}}</div>
             <div class="circlechart" data-percentage="{{blob_subjectivity}}">Subjectivity</div>
+
+            
+        </div>
+        <div id="demo" class="d-flex justify-content-center flex-row">
+            <h1>{{option1}}</h1>
+
+            
         </div>
     </div>
 </body>
