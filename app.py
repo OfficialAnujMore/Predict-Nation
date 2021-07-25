@@ -42,7 +42,7 @@ def form():
 @app.route('/analyse', methods=['POST'])
 def analyse():
 
-<<<<<<< HEAD
+
 	blob_polarity = 0 
 	blob_subjectivity = 0
 	sentiment = 'None'
@@ -124,7 +124,7 @@ def analyse():
 			list2.insert(developer_list2[i],developer_list3[i])
 		
 		prediction=model.predict([list2])
-		final_output="Your current estimated market value is ₹"+str(int(prediction))+".00 "
+		final_output="Your current estimated market value is ₹ "+str(int(prediction))+".00 "
 		#NLP stuff
 		
 		blob = TextBlob(raw_text)
